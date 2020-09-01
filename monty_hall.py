@@ -9,10 +9,7 @@ plays = 1000
 def monty_hall_many(doors, plays):
 
     car_behind_door = [doors[r.randrange(0,len(doors))] for i in range(1,plays+1)]
-
     first_choice = [doors[r.randrange(0,len(doors))] for i in range(1,plays +1)]
-
-
 
     open_door = []
     switch_to = []
@@ -47,7 +44,6 @@ def monty_hall_many(doors, plays):
         pct_win = 100*sum(win_or_no)/plays
         print("Winning percentage = {}%".format(pct_win))
 
-
         ## plotting
 
         x = list(range(1,plays+1))
@@ -68,4 +64,4 @@ def monty_hall_many(doors, plays):
     plt.ylabel("Success %")
     plt.show()
 
-monty_hall_many(doors, 5000)
+monty_hall_many(doors, plays)
